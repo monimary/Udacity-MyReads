@@ -184,6 +184,11 @@ button:active {
   cursor: pointer;
 }
 
+.mark-option {
+  color: #60ac5d;
+  font-weight: 800;
+}
+
 /* book cover */
 
 .book-cover {

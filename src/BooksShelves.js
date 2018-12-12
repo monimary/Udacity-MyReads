@@ -30,7 +30,7 @@ class BooksShelves extends Component {
                               <div className="book-shelf-changer">
                                 <select>
                                   <option value="move" disabled>Move to...</option>
-                                  <option value="currentlyReading">Currently Reading</option>
+                                  <option value="currentlyReading" className="mark-option ">Currently Reading</option>
                                   <option value="wantToRead">Want to Read</option>
                                   <option value="read">Read</option>
                                   <option value="none">None</option>
@@ -58,7 +58,7 @@ class BooksShelves extends Component {
                                 <select>
                                   <option value="move" disabled>Move to...</option>
                                   <option value="currentlyReading">Currently Reading</option>
-                                  <option value="wantToRead">Want to Read</option>
+                                  <option value="wantToRead" className="mark-option ">Want to Read</option>
                                   <option value="read">Read</option>
                                   <option value="none">None</option>
                                 </select>
@@ -86,7 +86,7 @@ class BooksShelves extends Component {
                                   <option value="move" disabled>Move to...</option>
                                   <option value="currentlyReading">Currently Reading</option>
                                   <option value="wantToRead">Want to Read</option>
-                                  <option value="read">Read</option>
+                                  <option value="read" className="mark-option ">Read</option>
                                   <option value="none">None</option>
                                 </select>
                               </div>
