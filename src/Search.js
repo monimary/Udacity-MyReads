@@ -10,7 +10,8 @@ import Book from './Book'
 class Search extends Component {
   state = {
     query: '',
-    showingBooks: []
+    showingBooks: [],
+    onShelfChange: this.props.onShelfChange
   };
 
   updateQuery = (query) => {
