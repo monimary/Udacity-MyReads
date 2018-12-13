@@ -6,7 +6,8 @@ import Book from './Book';
 
 class BookShelf extends Component {
     state = {
-        shelfValue: this.props.shelf
+        shelfValue: this.props.shelf,
+        onShelfChange: this.props.onShelfChange
     };
 
     render() {

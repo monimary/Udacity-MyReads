@@ -17,8 +17,9 @@ class BooksApp extends React.Component {
     });
   }
 
-  onShelfChange() {
-    console.log('change');
+  onShelfChange(book, newShelf) {
+    console.log(book);
+    console.log(newShelf);
   }
 
   render() {
