@@ -23,6 +23,7 @@ class BookShelf extends Component {
                         <Book 
                             book={ book }
                             onShelfChange={ this.props.onShelfChange }
+                            image={book.imageLinks ? book.imageLinks.thumbnail : "https://via.placeholder.com/128x193"}
                         />
                         </li>
                         ))}
