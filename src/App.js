@@ -32,15 +32,15 @@ class BooksApp extends React.Component {
               <div>
                   <BooksShelf 
                     shelf="Currently Reading"
-                    books={this.state.books.filter( book => book.schelf === 'currentlyReading')}
+                    books={this.state.books.filter( book => book.shelf === 'currentlyReading')}
                   />
                   <BooksShelf 
                     shelf="Want to Read"
-                    books={this.state.books.filter( book => book.schelf === 'wantToRead')}
+                    books={this.state.books.filter( book => book.shelf === 'wantToRead')}
                   />
                   <BooksShelf 
                     shelf="Read"
-                    books={this.state.books.filter( book => book.schelf === 'read')}
+                    books={this.state.books.filter( book => book.shelf === 'read')}
                   />
               </div>
             </div>
