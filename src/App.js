@@ -17,6 +17,10 @@ class BooksApp extends React.Component {
     });
   }
 
+  onShelfChange() {
+    console.log('change');
+  }
+
   render() {
     return (
       <div className="app">
@@ -33,14 +37,17 @@ class BooksApp extends React.Component {
                   <BooksShelf 
                     shelf="Currently Reading"
                     books={this.state.books.filter( book => book.shelf === 'currentlyReading')}
+                    onShelfChange={this.onShelfChange}
                   />
                   <BooksShelf 
                     shelf="Want to Read"
                     books={this.state.books.filter( book => book.shelf === 'wantToRead')}
+                    onShelfChange={this.onShelfChange}
                   />
                   <BooksShelf 
                     shelf="Read"
                     books={this.state.books.filter( book => book.shelf === 'read')}
+                    onShelfChange={this.onShelfChange}
                   />
               </div>
             </div>
