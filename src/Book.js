@@ -27,7 +27,7 @@ class BookShelf extends Component {
                     <div className="book-shelf-changer">
                         <select value={ this.state.shelfValue } onChange={ this.changeShelf }>
                             <option value="move" disabled>Move to...</option>
-                            <option value="currentlyReading" className="mark-option ">Currently Reading</option>
+                            <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want to Read</option>
                             <option value="read">Read</option>
                             <option value="none">None</option>
