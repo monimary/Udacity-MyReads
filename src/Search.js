@@ -30,16 +30,14 @@ class Search extends Component {
   render() {
     const { query } = this.state;
     const { books } = this.props;
+    
     let showingBooks;
 
-    console.log(books);
     if (query) {
       showingBooks = this.state.showingBooks
     } else {
       showingBooks = [];
     }
-
-    console.log(showingBooks)
 
     return (
       <div className="search-books">
