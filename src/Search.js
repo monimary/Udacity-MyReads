@@ -17,6 +17,12 @@ class Search extends Component {
   updateQuery = (query) => {
     if(query) {
       BooksAPI.search(query).then((books) => {
+        books.forEach((book) => {
+          if(!book.shelf) {
+            book.shelf = 'none';
+          }
+          console.log(books);
+        })
         this.setState(
           {
             query: query.trim(),
@@ -30,7 +36,7 @@ class Search extends Component {
   render() {
     const { query } = this.state;
     const { books } = this.props;
-    
+
     let showingBooks;
 
     if (query) {
