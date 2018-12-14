@@ -16,20 +16,31 @@ class Search extends Component {
 
   updateQuery = (query) => {
     if(query) {
-      BooksAPI.search(query).then((books) => {
-        books.forEach((book) => {
-          if(!book.shelf) {
-            book.shelf = 'none';
+      BooksAPI.search(query)
+        .then((books) => {
+          if(books.length > 0) {
+            books.forEach((book) => {
+              if(!book.shelf) {
+                book.shelf = 'none';
+              }
+            })
+            this.setState(
+              {
+                query: query.trim(),
+                showingBooks: books
+              }
+            )
           }
-          console.log(books);
+          else {
+            this.setState(
+              {
+                query: '',
+                showingBooks: []
+              }
+            )
+            alert('No books matching the query :(')
+          }
         })
-        this.setState(
-          {
-            query: query.trim(),
-            showingBooks: books
-          }
-        )
-      })
     }
   }
 
