@@ -24,9 +24,8 @@ class Search extends Component {
         .then((books) => {
           if(books.length > 0) {
             books.forEach((book) => {
-              if(!book.shelf) {
-                book.shelf = 'none';
-              }
+              let applyShelf = this.props.books.filter(b => b.id === book.id);
+              book.shelf = applyShelf[0] ? applyShelf[0].shelf : 'none';
             })
             this.setState(
               {
