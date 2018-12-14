@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import sortBy from "sort-by";
-import escapeRegExp from 'escape-string-regexp';
 import { Debounce } from "react-throttle";
 import * as BooksAPI from "./BooksAPI";
 import Book from './Book'
@@ -60,7 +58,6 @@ class Search extends Component {
 
   render() {
     const { query } = this.state;
-    const { books } = this.props;
 
     let showingBooks;
 
