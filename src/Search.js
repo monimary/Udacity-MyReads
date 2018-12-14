@@ -42,6 +42,14 @@ class Search extends Component {
           }
         })
     }
+    else {
+      this.setState(
+        {
+          query: '',
+          showingBooks: []
+        }
+      )
+    }
   }
 
   render() {
