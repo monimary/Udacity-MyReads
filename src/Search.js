@@ -9,6 +9,11 @@ import Book from './Book'
 
 
 class Search extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    onShelfChange: PropTypes.func.isRequired
+  }
+
   state = {
     query: '',
     showingBooks: [],
@@ -16,7 +21,6 @@ class Search extends Component {
   };
 
   updateQuery = (query) => {
-    console.log(query);
     if(query) {
       BooksAPI.search(query)
         .then((books) => {

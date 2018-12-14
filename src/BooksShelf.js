@@ -5,6 +5,12 @@ import sortBy from 'sort-by';
 import Book from './Book';
 
 class BookShelf extends Component {
+    static propTypes = {
+        shelf: PropTypes.string.isRequired,
+        books: PropTypes.array.isRequired,
+        onShelfChange: PropTypes.func.isRequired
+    }
+
     state = {
         shelfValue: this.props.shelf,
         onShelfChange: this.props.onShelfChange

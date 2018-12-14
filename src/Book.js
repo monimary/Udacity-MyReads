@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import sortBy from 'sort-by';
 
 class BookShelf extends Component {
+    static propTypes = {
+        book: PropTypes.object.isRequired,
+        onShelfChange: PropTypes.func.isRequired,
+        image: PropTypes.string.isRequired
+    }
+
     state = {
         shelfValue: this.props.book.shelf,
         onShelfChange: this.props.onShelfChange
